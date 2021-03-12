@@ -1,1 +1,73 @@
 # My-Vimrc
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'ycm-core/YouCompleteMe'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'hugolgst/vimsence'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+set number
+syntax on
+set autoindent
+call plug#begin('~/.vim/plugged')
+call plug#end()
+set noerrorbells
+set expandtab
+set smartindent
+set nowrap
+set smartcase
+set noswapfile
+set incsearch
+set clipboard = unnamedplus
+
+set tabstop=2 softtabstop=2
+se t_Co=256
+set background=dark
+colorscheme PaperColor
+
+
+let g:vimsence_client_id = '439476230543245312'
+let g:vimsence_small_text = 'NeoVim'
+let g:vimsence_small_image = 'neovim'
+let g:vimsence_editing_details = 'Editing: {}'
+let g:vimsence_editing_state = 'Working on: {}'
+let g:vimsence_file_explorer_text = 'In NERDTree'
+let g:vimsence_file_explorer_details = 'Looking for files'
+let g:vimsence_custom_icons = {'filetype': 'iconname'}
